@@ -1,114 +1,106 @@
-# 📊 Data Science Project 1 — E-Commerce Data Analysis
+# 📊 E-Commerce Data Analysis
+
+## Data Science Internship — Project 1
+
+**Internship Organization:** DecodeLabs
+**Tools:** Python, Pandas, Matplotlib, Jupyter Notebook, Microsoft Excel, GitHub
+
+---
 
 ## 📌 Project Overview
 
-This project is part of my **Data Science Internship**, where I performed a complete exploratory analysis of an e-commerce orders dataset using Python.
+This project was completed as part of my **Data Science Internship at DecodeLabs**.
 
-The objective of this project was to transform raw e-commerce data into meaningful insights by performing **data inspection, cleaning, validation, exploratory data analysis, aggregation, and visualization**.
+The project focuses on analyzing an e-commerce orders dataset using Python and Pandas. A structured data analysis workflow was followed, including data inspection, data cleaning, validation, exploratory data analysis (EDA), and visualization.
 
-Throughout the project, I focused on maintaining data quality and carefully interpreting the results rather than making assumptions from the data.
+The main goal is to transform raw e-commerce data into meaningful insights while maintaining data quality and interpreting results carefully.
 
 ---
 
 ## 🎯 Project Objectives
 
-The main objectives of this project were to:
-
-* Understand and inspect the structure of the dataset
+* Understand the structure and characteristics of the dataset
+* Perform data inspection and preprocessing
 * Identify and handle missing values
 * Check for duplicate records
 * Detect and evaluate potential outliers
-* Validate numerical values
-* Verify price calculations
-* Validate dates and categorical variables
-* Analyze sales and revenue patterns
-* Compare products, payment methods, coupons, and referral sources
-* Identify important trends through data visualization
+* Validate numerical, categorical, and date-related data
+* Verify order price calculations
+* Analyze products, customers, payment methods, order statuses, coupons, and referral sources
+* Examine monthly and yearly order-value trends
+* Create meaningful data visualizations
+* Summarize key findings and limitations
 
 ---
 
 ## 🧹 Data Cleaning & Validation
 
-Before performing the analysis, the dataset was systematically checked for data-quality issues.
+The dataset was systematically checked and validated before performing the analysis.
 
-### Checks Performed
+The following checks were performed:
 
-* ✅ Missing value analysis
-* ✅ Duplicate row detection
-* ✅ Outlier detection
-* ✅ Numerical value validation
-* ✅ Categorical consistency checks
-* ✅ Date validation
-* ✅ Price calculation verification
-* ✅ Data type inspection
+* Missing values
+* Duplicate records
+* Categorical consistency
+* Numerical validity
+* Potential outliers
+* Date validation
+* Price calculation consistency
 
-The `CouponCode` column contained missing values. These were handled by treating missing coupon entries as **"No Coupon"**, allowing the coupon analysis to retain all records.
+Missing coupon codes were replaced with **"No Coupon"** to preserve the information that no coupon was recorded for those orders.
 
-Potential outliers in `TotalPrice` were inspected and retained because they were considered valid observations rather than automatically removing them.
+The final dataset contains **1,200 records with no remaining missing values or duplicate rows**.
 
 ---
 
 ## 📊 Exploratory Data Analysis
 
-The analysis covers multiple dimensions of the e-commerce dataset.
+The analysis covered:
 
-### Revenue & Sales Analysis
+* Overall order volume and recorded order value
+* Product-wise performance
+* Order status distribution
+* Payment method usage
+* Coupon code usage
+* Referral source performance
+* Monthly and yearly trends
+* Customer-level activity
+* Quantity-wise order value
+* Average Order Value (AOV)
+* Category-level comparisons
 
-* Total orders
-* Total revenue
-* Average Order Value
-* Product-wise revenue
-* Product-wise order volume
-* Product-wise average order value
-* Monthly revenue trends
-* Customer-level revenue analysis
-* Quantity-wise revenue analysis
+---
 
-### Business Dimension Analysis
+## 🔎 Key Findings
 
+* **Total Orders:** 1,200
+* **Total Recorded Order Value:** 1,264,761.96
+* **Average Order Value:** 1,053.97
+* **Highest Recorded Order Value by Product:** Chair — 195,620.11
+* **Highest Average Order Value by Product:** Laptop — 1,110.56
+* **Highest Recorded Order Value by Payment Method:** Credit Card — 263,847.63
+* **Highest Recorded Order Value by Referral Source:** Instagram — 275,285.45
+* **Highest Recorded Order Value by Coupon:** FREESHIP — 335,036.99
+* **Highest Recorded Order-Value Month:** June 2024 — 68,068.54
+
+These findings describe patterns and associations in the dataset and should not be interpreted as evidence of causal relationships.
+
+---
+
+## 📈 Visualizations
+
+The project includes visualizations for:
+
+* Monthly order-value trends
+* Product-wise recorded order value
 * Payment method analysis
 * Order status analysis
-* Coupon code analysis
 * Referral source analysis
-
-These comparisons were used to understand how different categories are represented within the dataset and how their associated revenue differs.
-
----
-
-## 📈 Key Findings
-
-Based on the analyzed dataset:
-
-* **1,200 orders** were analyzed.
-* Total recorded order value was approximately **1.26 million**.
-* Average Order Value was approximately **1,053.97**.
-* **Chair** generated the highest total recorded revenue among products.
-* **Laptop** had the highest average order value.
-* **Credit Card** had the highest associated revenue among payment methods.
-* **Instagram** had the highest associated revenue among referral sources.
-* **FREESHIP** had the highest associated revenue among coupon categories.
-* **June 2024** recorded the highest monthly revenue in the dataset.
-
-These findings describe patterns in the available data and should not be interpreted as proof of causation.
+* Coupon code analysis
 
 ---
 
-## 📊 Visualizations
-
-Matplotlib was used to create visualizations for:
-
-* Monthly Revenue Trend
-* Product Revenue
-* Payment Method Revenue
-* Order Status Revenue
-* Referral Source Revenue
-* Coupon Code Revenue
-
-The visualizations make it easier to compare categories and identify revenue patterns.
-
----
-
-## 🛠️ Technologies & Tools
+## 🛠️ Technologies Used
 
 * **Python**
 * **Pandas**
@@ -119,7 +111,7 @@ The visualizations make it easier to compare categories and identify revenue pat
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```text
 Data-Science-Project-1/
@@ -132,7 +124,7 @@ Data-Science-Project-1/
 
 ---
 
-## 🔍 Project Workflow
+## 🔄 Data Analysis Workflow
 
 ```text
 Raw Dataset
@@ -145,50 +137,34 @@ Data Validation
      ↓
 Exploratory Data Analysis
      ↓
-Revenue & Category Analysis
-     ↓
 Data Visualization
      ↓
 Key Findings
+     ↓
+Conclusion & Limitations
 ```
 
 ---
 
-## 💡 Skills Demonstrated
+## 📝 Conclusion
 
-This project demonstrates practical experience with:
+This project demonstrates a complete data analysis workflow using an e-commerce dataset.
 
-* Data preprocessing
-* Data cleaning
-* Data validation
-* Exploratory Data Analysis (EDA)
-* Pandas DataFrame operations
-* GroupBy and aggregation
-* Revenue analysis
-* Trend analysis
-* Data visualization
-* Analytical interpretation
-* Jupyter Notebook workflow
-* GitHub project organization
+The analysis covers data quality checks, exploratory analysis, business-related comparisons, and visualizations. The project demonstrates practical skills in **Python, Pandas, data cleaning, exploratory data analysis, visualization, and interpretation**.
 
 ---
 
-## 📎 Project Files
+## ⚠️ Limitations
 
-**Dataset:** `Dataset_for_Data_Analytics.xlsx`
-**Analysis Notebook:** `Project_1_Data_Science.ipynb`
-**Output:** `output.png`
-
----
-
-## 👩‍💻 About This Project
-
-I completed this project as part of my Data Science Internship with a focus on developing a strong understanding of the complete data-analysis workflow — from **raw data inspection and cleaning to analysis, visualization, and interpretation**.
-
-This project reflects my approach of working systematically with data, validating results, and documenting the analytical process clearly.
+* The dataset covers January 2023 to June 2025, so **2025 represents only a partial year**.
+* `TotalPrice` represents recorded order value and should not automatically be interpreted as realized revenue because the dataset contains cancelled, returned, and pending orders.
+* Observed relationships between categories and order value represent **associations rather than causal effects**.
+* The dataset does not provide enough information to determine the reasons behind changes in order value or customer behavior.
 
 ---
 
-### ⭐ Project Status
+## 👩‍💻 Project Status
 
-**Completed — Data Analysis & Visualization**
+**Completed — Data Science Internship Project 1**
+
+**Organization:** DecodeLabs
