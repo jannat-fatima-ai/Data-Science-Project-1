@@ -1,170 +1,113 @@
-# 📊 E-Commerce Data Analysis
+# 📊 Data Science Internship — Project 1
 
-## Data Science Internship — Project 1
+## E-Commerce Data Cleaning, Analysis & Feature Engineering
 
 **Internship Organization:** DecodeLabs
-**Tools:** Python, Pandas, Matplotlib, Jupyter Notebook, Microsoft Excel, GitHub
 
----
-
-## 📌 Project Overview
+### 📌 Project Overview
 
 This project was completed as part of my **Data Science Internship at DecodeLabs**.
 
-The project focuses on analyzing an e-commerce orders dataset using Python and Pandas. A structured data analysis workflow was followed, including data inspection, data cleaning, validation, exploratory data analysis (EDA), and visualization.
+The project focuses on transforming raw e-commerce data into a clean, validated, and machine-learning-ready dataset through data cleaning, statistical imputation, outlier treatment, exploratory analysis, and feature engineering.
 
-The main goal is to transform raw e-commerce data into meaningful insights while maintaining data quality and interpreting results carefully.
+### 🎯 Objectives
 
----
+- Clean and validate the raw dataset
+- Handle missing values using statistical methods
+- Detect and neutralize outliers using the IQR method
+- Perform exploratory data analysis (EDA)
+- Engineer new features from existing data
+- Prepare the dataset for machine learning applications
 
-## 🎯 Project Objectives
+### 🧹 Data Cleaning & Validation
 
-* Understand the structure and characteristics of the dataset
-* Perform data inspection and preprocessing
-* Identify and handle missing values
-* Check for duplicate records
-* Detect and evaluate potential outliers
-* Validate numerical, categorical, and date-related data
-* Verify order price calculations
-* Analyze products, customers, payment methods, order statuses, coupons, and referral sources
-* Examine monthly and yearly order-value trends
-* Create meaningful data visualizations
-* Summarize key findings and limitations
+The dataset was systematically checked for:
 
----
+- Missing values
+- Duplicate records
+- Invalid numerical values
+- Date consistency
+- Categorical consistency
+- Total price calculation consistency
 
-## 🧹 Data Cleaning & Validation
+### 🤖 Machine Learning Data Preparation
 
-The dataset was systematically checked and validated before performing the analysis.
+- Numeric missing values were handled using **median statistical imputation**.
+- Missing `CouponCode` values were labeled as `No Coupon`.
+- Outliers were detected using the **Interquartile Range (IQR)** method.
+- Detected `TotalPrice` outliers were neutralized using IQR-based capping.
+- **8 `TotalPrice` outliers** were neutralized.
 
-The following checks were performed:
+### ⚙️ Feature Engineering
 
-* Missing values
-* Duplicate records
-* Categorical consistency
-* Numerical validity
-* Potential outliers
-* Date validation
-* Price calculation consistency
+Four new features were created:
 
-Missing coupon codes were replaced with **"No Coupon"** to preserve the information that no coupon was recorded for those orders.
+- `HasCoupon`
+- `IsDigitalPayment`
+- `OrderMonth`
+- `CartUtilization`
 
-The final dataset contains **1,200 records with no remaining missing values or duplicate rows**.
+### 📊 Exploratory Data Analysis
 
----
+The analysis examined:
 
-## 📊 Exploratory Data Analysis
+- Overall order value
+- Product performance
+- Order status
+- Payment methods
+- Coupon usage
+- Referral sources
+- Monthly and yearly trends
+- Customer-level order value
+- Quantity-based order patterns
 
-The analysis covered:
-
-* Overall order volume and recorded order value
-* Product-wise performance
-* Order status distribution
-* Payment method usage
-* Coupon code usage
-* Referral source performance
-* Monthly and yearly trends
-* Customer-level activity
-* Quantity-wise order value
-* Average Order Value (AOV)
-* Category-level comparisons
-
----
-
-## 🔎 Key Findings
-
-* **Total Orders:** 1,200
-* **Total Recorded Order Value:** 1,264,761.96
-* **Average Order Value:** 1,053.97
-* **Highest Recorded Order Value by Product:** Chair — 195,620.11
-* **Highest Average Order Value by Product:** Laptop — 1,110.56
-* **Highest Recorded Order Value by Payment Method:** Credit Card — 263,847.63
-* **Highest Recorded Order Value by Referral Source:** Instagram — 275,285.45
-* **Highest Recorded Order Value by Coupon:** FREESHIP — 335,036.99
-* **Highest Recorded Order-Value Month:** June 2024 — 68,068.54
-
-These findings describe patterns and associations in the dataset and should not be interpreted as evidence of causal relationships.
-
----
-
-## 📈 Visualizations
+### 📈 Visualizations
 
 The project includes visualizations for:
 
-* Monthly order-value trends
-* Product-wise recorded order value
-* Payment method analysis
-* Order status analysis
-* Referral source analysis
-* Coupon code analysis
+- Monthly revenue trends
+- Product revenue
+- Payment method revenue
+- Order status revenue
+- Referral source revenue
+- Coupon code revenue
+
+### 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Jupyter Notebook
+- Microsoft Excel
+
+### 📁 Project Files
+
+- `Project_1_Data_Science.ipynb` — Complete analysis notebook
+- `Dataset_for_Data_Analytics.xlsx` — Source dataset
+- `output.png` — Project output/visualization
+
+### ✅ Final Dataset
+
+After cleaning and feature engineering:
+
+- **Records:** 1,200
+- **Columns:** 18
+- **Missing values:** 0
+- **Duplicate rows:** 0
+- **Engineered features:** 4
+
+### 📝 Conclusion
+
+The project demonstrates a complete data preparation workflow, from raw e-commerce data cleaning and validation to exploratory analysis and machine-learning-oriented feature engineering.
+
+### ⚠️ Limitations
+
+- The dataset covers January 2023 to June 2025, so 2025 represents a partial year.
+- `TotalPrice` represents recorded order value and should not automatically be interpreted as realized revenue.
+- Observed relationships in the dataset represent associations and do not establish causation.
 
 ---
 
-## 🛠️ Technologies Used
-
-* **Python**
-* **Pandas**
-* **Matplotlib**
-* **Jupyter Notebook**
-* **Microsoft Excel**
-* **GitHub**
-
----
-
-## 📁 Project Structure
-
-```text
-Data-Science-Project-1/
-│
-├── Dataset_for_Data_Analytics.xlsx
-├── Project_1_Data_Science.ipynb
-├── output.png
-└── README.md
-```
-
----
-
-## 🔄 Data Analysis Workflow
-
-```text
-Raw Dataset
-     ↓
-Data Inspection
-     ↓
-Data Cleaning
-     ↓
-Data Validation
-     ↓
-Exploratory Data Analysis
-     ↓
-Data Visualization
-     ↓
-Key Findings
-     ↓
-Conclusion & Limitations
-```
-
----
-
-## 📝 Conclusion
-
-This project demonstrates a complete data analysis workflow using an e-commerce dataset.
-
-The analysis covers data quality checks, exploratory analysis, business-related comparisons, and visualizations. The project demonstrates practical skills in **Python, Pandas, data cleaning, exploratory data analysis, visualization, and interpretation**.
-
----
-
-## ⚠️ Limitations
-
-* The dataset covers January 2023 to June 2025, so **2025 represents only a partial year**.
-* `TotalPrice` represents recorded order value and should not automatically be interpreted as realized revenue because the dataset contains cancelled, returned, and pending orders.
-* Observed relationships between categories and order value represent **associations rather than causal effects**.
-* The dataset does not provide enough information to determine the reasons behind changes in order value or customer behavior.
-
----
-
-## 👩‍💻 Project Status
-
-**Completed — Data Science Internship Project 1**
-
-**Organization:** DecodeLabs
+**Data Science Internship — Project 1**  
+**DecodeLabs**
